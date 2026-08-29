@@ -40,3 +40,42 @@ sin el rol Administrador · `session["es_admin"]` decidido por la API.
 
 ## 5. TERMINADA
 Criterios en verde → tag `v7` → solo entonces se especifica la v8.
+
+## 6. Clarificaciones
+
+> **Qué es esta sección:** el registro de las ambigüedades detectadas ANTES
+> de planear, con la respuesta que se acordó y su razón. Es **la compuerta
+> 1** del método (ver [SDD_SPECKIT](../../../SDD_SPECKIT.md)): mientras
+> quede un `[NECESITA ACLARACIÓN: …]` en los requisitos de arriba, esta
+> versión no pasa a la planeación.
+
+Esta versión **no dejó ambigüedades registradas**: se especificó sobre
+decisiones que ya estaban tomadas y escritas en versiones anteriores. Eso
+no la exime de la compuerta — significa que se pasó en verde.
+
+Si al construirla aparece una (y la señal típica es una IA diciendo "asumo
+que…", o dos personas leyendo distinto el mismo requisito), se anota aquí
+**antes** de tocar el plan, con este formato:
+
+| # | La pregunta | La respuesta acordada, con su razón | Dónde quedó |
+|---|---|---|---|
+| C1 | *(la pregunta tal como se hizo)* | *(la respuesta y por qué)* | *(RF, contrato o criterio donde quedó)* |
+
+**Cómo se escribe una entrada nueva:** la pregunta tal como se hizo (no
+"revisar el borrado", sino "¿físico o lógico?"), la respuesta **con su
+razón**, y el documento donde quedó plasmada. Si la respuesta cambia un
+requisito, se corrige el requisito allá arriba: esta sección lo registra,
+no lo reemplaza.
+
+## 7. Definición de TERMINADA
+
+Esta versión está terminada — y solo entonces se escribe la spec de la
+siguiente — cuando:
+
+1. Todos los **criterios de aceptación** pasan, verificados con el smoke
+   test de [7_quickstart.md](7_quickstart.md), **corrido por una persona**.
+   "Me funciona" no es evidencia.
+2. La lista de [9_checklist.md](9_checklist.md) está en verde y firmada.
+3. No queda ningún `[NECESITA ACLARACIÓN: …]` en este documento.
+4. Se hace commit y **tag** de la versión, según la
+   [constitución](../../1_constitution.md).
